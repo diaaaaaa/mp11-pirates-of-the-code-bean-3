@@ -1,11 +1,20 @@
 package at.refugeescode.mp11piratesofthecodebean3.persistence;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+@Entity
 public class Pirate {
 
+    @Id
+    @GeneratedValue
     private Long id;
 
     private String name;
 
+    @OneToOne
     private PieceOfEight pieceOfEight;
 
     public Long getId() {
@@ -30,5 +39,14 @@ public class Pirate {
 
     public void setPieceOfEight(PieceOfEight pieceOfEight) {
         this.pieceOfEight = pieceOfEight;
+    }
+
+    @Override
+    public String toString() {
+        return "Pirate{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pieceOfEight=" + pieceOfEight +
+                '}';
     }
 }

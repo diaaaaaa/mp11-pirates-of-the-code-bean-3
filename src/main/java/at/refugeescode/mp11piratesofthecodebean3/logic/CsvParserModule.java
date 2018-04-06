@@ -2,7 +2,7 @@ package at.refugeescode.mp11piratesofthecodebean3.logic;
 
 public abstract class CsvParserModule<T> {
 
-    private String path;
+    private String path ;
 
     public CsvParserModule(String path) {
         this.path = path;
